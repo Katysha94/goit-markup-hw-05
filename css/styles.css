@@ -104,7 +104,7 @@ display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
-    transition: var(--transition-duration-and-func);
+    transition:  color var(--transition-duration-and-func);
 }
 
 .menu-link:hover,
@@ -174,7 +174,7 @@ display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-left: auto;
-    transition: var(--transition-duration-and-func);
+    transition: color var(--transition-duration-and-func);
 }
 
 
@@ -234,11 +234,11 @@ display: flex;
     min-width: 169px;
     height: 56px;
     border: none;
-    transition: var(--transition-duration-and-func);
+    transition: background-color var(--transition-duration-and-func);
  }
  .modal-open-btn:hover,
  .modal-open-btn:focus {
-    background-color:var(--accent-color);
+    background-color: var(--accent-color);
  }
 
  /* feauters */
@@ -254,6 +254,7 @@ display: flex;
 
 .icon-item {
     width: calc((100% - 72px) / 4);
+    transition: drop-shadow var(--transition-duration-and-func);
 }
 
 .icon-item:hover,
@@ -399,6 +400,7 @@ display: flex;
     height: 40px;
     background-color: var(--secondary-accent-color);
     border-radius: 50%;
+    transition: background-color var(--transition-duration-and-func);
  }
 
  .social-list-link:hover,
@@ -446,6 +448,7 @@ display: flex;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     color: #8E8F99;
+    transition: color var(--transition-duration-and-func), border-color var(--transition-duration-and-func);
  }
 
 .customers-list-icon {
@@ -533,6 +536,7 @@ display: flex;
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    transition: background-color var(--transition-duration-and-func);
 }
 
 .ft-social-list-link:hover,
@@ -553,19 +557,20 @@ display: flex;
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
+    transition: color var(--transition-duration-and-func);
 }
 
 .modal {
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
     width: 408px;
     height: 584px;
     width: 408px;
     background: #FCFCFC;
-    transform: translate(-50%, -50%);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
+    border-radius: 4px;
 }
 
 .modal-close-btn {
@@ -579,9 +584,10 @@ display: flex;
     height: 24px;
     padding-left: 0;
     padding-right: 0;
-    background: #E7E9FC;
+    background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition: background-color var(--transition-duration-and-func), fill var(--transition-duration-and-func);
 }
 
 .is-hidden {
@@ -589,6 +595,19 @@ display: flex;
     visibility: hidden;
     pointer-events: none;
 }
+
+.modal-close-icon {
+    fill: var(--primary-text-color);
+}
+
+.modal-close-btn:hover {
+    background-color: var(--accent-color);
+    fill: #FFFFFF;
+}
+  
+.modal-close-btn:hover .modal-close-icon {
+    fill: #FFFFFF;
+} 
 
 /* portfolio.html */
 
@@ -615,6 +634,7 @@ display: flex;
     border: 1px solid #E7E9FC;
     padding: 12px 24px;
     border-radius: 4px;
+    transition: background-color var(--transition-duration-and-func);
 
 }
 .navigation-button:hover,
@@ -635,6 +655,7 @@ display: flex;
 
 .work-examples-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow var(--transition-duration-and-func);
 }
 
 .work-examples-link {
@@ -644,6 +665,29 @@ display: flex;
 .work-examples-link:hover,
 .work-examples-link:focus {
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.work-examples-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-accent-color);
+    color: var(--logo-footer-second-color);
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform var(--transition-duration-and-func);
+}
+
+.work-examples-overlay:hover .overlay,
+.work-examples-overlay:focus .overlay {
+    transform: translateY(0%);
 }
 
 .work-examples-border {
