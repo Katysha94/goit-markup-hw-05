@@ -448,7 +448,7 @@ display: flex;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     color: #8E8F99;
-    transition: border-color var(--transition-duration-and-func), color(--transition-duration-and-func);
+    transition: border-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
  }
 
 .customers-list-icon {
@@ -691,7 +691,10 @@ display: flex;
     transition: transform var(--transition-duration-and-func);
 }
 
-.work-examples-overlay:hover .overlay,
+.work-examples-overlay:hover .overlay {
+    transform: translateY(0%);
+}
+
 .work-examples-overlay:focus .overlay {
     transform: translateY(0%);
 }
