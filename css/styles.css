@@ -691,11 +691,8 @@ display: flex;
     transition: transform var(--transition-duration-and-func);
 }
 
-.work-examples-overlay:hover .overlay {
-    transform: translateY(0%);
-}
-
-.work-examples-overlay:focus .overlay {
+.work-examples-link:hover .overlay,
+.work-examples-link:focus .overlay {
     transform: translateY(0%);
 }
 
